@@ -7,11 +7,15 @@ import android.widget.Toast
 import com.example.flashlight.MainActivity
 import com.google.android.material.snackbar.Snackbar
 import java.lang.Exception
+import kotlin.concurrent.thread
+import kotlin.properties.Delegates
 
 class CameraManaging(val context: Context) {
 
     var cameraObject: Camera? = null
     var isFlashlightTurnedOn = false
+    var speed: Int = 0
+    private var continueGun: Boolean = true
 
     fun turnOnFlashlight() {
         try {
@@ -31,6 +35,22 @@ class CameraManaging(val context: Context) {
             exception.stackTrace
             Toast.makeText(context, "try again", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    fun turnOnMachineGunFlashlight() {
+        continueGun = true
+
+        thread {
+            while (continueGun) {
+                turnOnFlashlight()
+                turnOfFlashlight()
+                Thread.sleep((speed * 20).toLong())
+            }
+        }
+    }
+
+    fun stopGun() {
+        continueGun = false
     }
 
     fun turnOfFlashlight() {

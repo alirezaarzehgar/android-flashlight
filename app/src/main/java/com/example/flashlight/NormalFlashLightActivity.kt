@@ -5,12 +5,8 @@ import android.os.Bundle
 import com.example.flashlight.camera.CameraManaging
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_normal_flash_light.*
-import kotlinx.android.synthetic.main.button_layout.*
 
 class NormalFlashLightActivity : AppCompatActivity() {
-
-    val cameraManaging = CameraManaging(this)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_normal_flash_light)
@@ -19,16 +15,17 @@ class NormalFlashLightActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "common flashlight"
 
-        flashlightButtong.setOnClickListener {
+        val cameraManaging = CameraManaging(this)
+
+        flashlight_buttong_normal.setOnClickListener {
             if (cameraManaging.isFlashlightTurnedOn) {
                 cameraManaging.turnOfFlashlight()
-                flashlightButtong.setIconTintResource(R.color.off)
+                flashlight_buttong_normal.setIconTintResource(R.color.off)
             }
             else {
                 cameraManaging.turnOnFlashlight()
-                flashlightButtong.setIconTintResource(R.color.on)
+                flashlight_buttong_normal.setIconTintResource(R.color.on)
             }
         }
-
     }
 }

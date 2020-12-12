@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FlashlightMachineGunActivity"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    tools:context=".FlashlightMachineGunActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_gun"
@@ -15,5 +15,32 @@
         app:titleTextColor="@color/white"
         tools:ignore="MissingConstraints" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/flashlight_buttong_gun"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bty_style"
+        app:backgroundTint="@color/colorSecondary"
+        app:icon="@drawable/ic_power_turned_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <SeekBar
+        android:id="@+id/flashlight_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/seekbar_margin"
+        android:layout_marginStart="@dimen/seekbar_margin"
+        android:min="0"
+        android:max="100"
+        android:progressTint="@color/black"
+        android:progress="50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flashlight_buttong_gun" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,19 @@
         tools:ignore="MissingConstraints" />
 
 
-    <include layout="@layout/button_layout" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/flashlight_buttong_normal"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_power_turned_off"
+        android:background="@drawable/bty_style"
+        app:backgroundTint="@color/colorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

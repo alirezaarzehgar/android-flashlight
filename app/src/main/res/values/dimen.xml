@@ -2,4 +2,5 @@
 <resources>
     <dimen name="icon_size">70sp</dimen>
     <dimen name="icon_margin">10dp</dimen>
+    <dimen name="seekbar_margin">30dp</dimen>
 </resources>

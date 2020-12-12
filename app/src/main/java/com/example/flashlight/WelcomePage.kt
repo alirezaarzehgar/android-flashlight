@@ -20,7 +20,7 @@ class WelcomePage : AppCompatActivity() {
         setContentView(R.layout.activity_welcome_page)
 
         Thread(Runnable {
-            repeat(100) {
+            repeat(101) {
                 pBar.incrementProgressBy(1)
 
                 this@WelcomePage.runOnUiThread(java.lang.Runnable {
