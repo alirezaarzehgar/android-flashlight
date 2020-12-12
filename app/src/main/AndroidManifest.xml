@@ -13,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/Theme.Flashlight">
-        <activity android:name=".FlashlightMachineGunActivity"></activity>
-        <activity android:name=".NormalFlashLightActivity" />
+        <activity android:name=".FlashlightMachineGunActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".NormalFlashLightActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

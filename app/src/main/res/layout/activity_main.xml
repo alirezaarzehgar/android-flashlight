@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
     <androidx.appcompat.widget.Toolbar
@@ -14,45 +14,43 @@
         app:titleTextColor="@color/white"
         tools:ignore="MissingConstraints" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/normal"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/button_styles"
+        app:backgroundTint="@color/colorSecondary"
+        app:icon="@drawable/ic_power_turned_off"
+        app:iconGravity="textEnd"
+        app:iconSize="@dimen/icon_size"
+        android:layout_marginStart="@dimen/icon_margin"
+        android:layout_marginEnd="@dimen/icon_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/machine_gun"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:rippleColor="@color/on"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/machine_gun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/icon_margin"
+        android:layout_marginEnd="@dimen/icon_margin"
+        android:background="@drawable/button_styles"
+        app:backgroundTint="@color/colorSecondary"
+        app:icon="@drawable/submachine_gun"
+        app:iconGravity="textEnd"
+        app:iconSize="@dimen/icon_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/button_styles"
-            app:icon="@drawable/ic_power_turned_off"
-            app:iconSize="@dimen/icon_size"
-            app:backgroundTint="@color/colorSecondary"
-            android:layout_marginEnd="@dimen/icon_margin"
-            android:layout_marginStart="@dimen/icon_margin"
-            app:iconGravity="textEnd"
-            app:rippleColor="@color/on"/>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/machine_gun"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_styles"
-                app:icon="@drawable/submachine_gun"
-                app:iconSize="@dimen/icon_size"
-                app:backgroundTint="@color/colorSecondary"
-                android:layout_marginStart="@dimen/icon_margin"
-                android:layout_marginEnd="@dimen/icon_margin"
-                app:iconGravity="textEnd"
-                app:rippleColor="@color/on"/>
-
-    </LinearLayout>
-
+        app:layout_constraintStart_toEndOf="@+id/normal"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:rippleColor="@color/on"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,19 +1,10 @@
 package com.example.flashlight
 
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.content.res.ColorStateList
-import android.graphics.Color
-import android.graphics.Color.YELLOW
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.hardware.Camera
 import android.widget.Toast
-import com.example.flashlight.camera.CameraManaging
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.button_layout.*
-import java.lang.reflect.Parameter
-import java.security.Policy
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
